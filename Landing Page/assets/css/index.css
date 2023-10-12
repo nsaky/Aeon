@@ -31,7 +31,7 @@ body {
     background-image: url('../Images/image-hero-desktop.webp'), var(--backgroundBody);
     background-repeat: no-repeat;
     background-size: 991px ;
-    background-position: top right;
+    background-position: 50vw -7em, 0 0;
 }
 
 main {
@@ -74,6 +74,10 @@ main {
 .sectiontitle {
     margin-top: 50px;
     height: 100vh;
+}
+
+.sectiontitle-txt{
+  margin-top: 100px;
 }
 
 .sectiontitle-txt h1 {
@@ -121,9 +125,9 @@ main {
     display: grid;
     place-content: center;
     grid-template-columns: 350px 350px 350px;
-    grid-template-rows: 370px;
+    grid-template-rows: 320px;
     column-gap: 1.5em;
-    margin-top: 35%;
+    margin-top: 150px;
 }
 
 .info {
@@ -236,4 +240,208 @@ main {
 
 .attribution a{
     color: var(--color4);
+}
+
+
+/* PRICING */
+
+.Pricing {
+  width: 90%;
+  margin: 0 auto;
+  padding: 4em 0;
+  font-weight: 700;
+  font-family: "Montserrat";
+  font-size: 15px;
+}
+
+.bg-top {
+  position: absolute;
+  z-index: -1;
+  top: -50px;
+  right: -150px;
+}
+.bg-bottom {
+  display: none;
+}
+
+.Pricing button {
+  width: 100%;
+  text-transform: uppercase;
+  padding: 1.125em 0;
+  border-radius: 8px;
+  margin-top: 2.5em;
+  margin-bottom: 0.5em;
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  cursor: pointer;
+}
+
+.Pricing h1 {
+  font-size: 72px;
+  color: #4a4d60;
+  margin: 0.25em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.Pricing h1 span {
+  font-size: 40px;
+}
+
+.Pricing h2 {
+  font-size: 32px;
+  color: #6e728e;
+  margin-bottom: 1em;
+}
+
+.Pricing header {
+  margin-bottom: 5em;
+}
+
+.toggle--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.75em;
+}
+
+.toggle--container span {
+  color: #6e728e;
+  opacity: 0.5;
+}
+
+#price-toggle {
+  height: 0;
+  width: 0;
+  display: none;
+}
+
+.Pricing label {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-indent: -9999px;
+  width: 56px;
+  height: 32px;
+  background: linear-gradient(#a2a7f0, #696edd);
+  border-radius: 50px;
+}
+
+.Pricing label:hover {
+  opacity: 0.5;
+}
+
+.Pricing label:after {
+  content: "";
+  position: absolute;
+  background: white;
+  width: 24px;
+  height: 24px;
+  top: 4px;
+  right: 4px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.Pricing label:active:after {
+  width: 30px;
+}
+
+.Pricing input:checked + label:after {
+  right: calc(100% - 4px);
+  transform: translateX(100%);
+}
+
+.Pricing .card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(212, 210, 244, 0.5);
+  margin: 0 auto;
+  margin-bottom: 2em;
+  padding: 2em 2em;
+  max-width: 330px;
+}
+
+.Pricing .card__title {
+  font-size: 18px;
+  color: #6e728e;
+}
+
+.Pricing .card__details p {
+  color: #6e728e;
+  padding: 1.125em 0;
+  border-bottom: solid 1px color-mix(in srgb, #979797 25%, white);
+}
+
+.Pricing .card__details p:first-child {
+  border-top: solid 1px color-mix(in srgb, #979797 25%, white);
+}
+
+.Pricing button.primary {
+  background: linear-gradient(#a2a7f0, #696edd);
+  color: white;
+}
+.Pricing button.primary:hover {
+  background: transparent;
+  color: #6d72de;
+  border: inset 1px #6d72de;
+  margin-top: calc(2.5em - 1px);
+  margin-bottom: calc(0.5em - 1px);
+}
+
+.Pricing .card.accent {
+  background: linear-gradient(#a2a7f0, #696edd);
+}
+
+.Pricing .card.accent .card__title,
+.Pricing .card.accent h1,
+.Pricing .card.accent .card__details p {
+  color: white;
+}
+
+.Pricing .card.accent .card__details p {
+  border-bottom: solid 1px color-mix(in srgb, white 25%, transparent);
+}
+.Pricing .card.accent .card__details p:first-child {
+  border-top: solid 1px color-mix(in srgb, white 25%, transparent);
+}
+
+.Pricing button.accent {
+  background-color: white;
+  color: #6d72de;
+}
+.Pricing button.accent:hover {
+  background: transparent;
+  color: white;
+  border: solid 1px white;
+  margin-top: calc(2.5em - 1px);
+  margin-bottom: calc(0.5em - 1px);
+}
+
+@media (min-width: 1000px) {
+  .Pricing .bg-bottom {
+    display: block;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .Pricing content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Pricing .card {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .Pricing .card.accent {
+    padding: 3.5em 2.25em;
+    max-width: 350px;
+  }
 }
