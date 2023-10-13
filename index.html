@@ -24,11 +24,13 @@
       href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css"
     />
 
+    <!-- AOS LIBRARY -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Tool Name</title>
   </head>
   <body>
     <header class="header">
-      <a href="#"><img src="Landing Page/images/logo.svg" alt="" class="logo" /></a>
+      <a data-aos="fade-down-right" data-aos-duration="1000" href="#"><img src="Landing Page/images/logo.svg" alt="" class="logo" /></a>
       <input
         type="checkbox"
         class="navigation-checkbox"
@@ -42,7 +44,7 @@
         <span class="navigation-icon" aria-hidden="true">&nbsp;</span>
       </label>
       <div class="overlay" aria-hidden="true">&nbsp;</div>
-      <nav class="nav" id="primary-navigation">
+      <nav  data-aos="fade-down" data-aos-duration="1000" class="nav" id="primary-navigation">
         <ul class="nav__list" role="list" aria-label="primary">
           <li class="nav__item"><a href="#why-us" class="nav__link"> Why Us? </a></li>
           <li class="nav__item"><a href="#testimonial" class="nav__link"> Testimonials </a></li>
@@ -51,13 +53,13 @@
         </ul>
       </nav>
 
-      <a href="Login & Signup Form/index.html" class="cta-btn" data-visible="visible">Login</a>
+      <a data-aos="fade-down-left" data-aos-duration="1000" href="Login & Signup Form/index.html" class="cta-btn" data-visible="visible">Login</a>
     </header>
 
     <main>
       <section class="section-intro">
         <div class="intro">
-          <div class="intro__text-box">
+          <div data-aos="fade-right" data-aos-duration="1000" class="intro__text-box">
             <h1 class="heading-primary">
               Unlock Your Best Day Yet with [Tool Name]
             </h1>
@@ -66,7 +68,7 @@
             </p>
             <a href="Login & Signup Form/index.html" class="cta-btn">Get Started</a>
           </div>
-          <div class="intro__photo-box">
+          <div data-aos="fade-left" data-aos-duration="1000" class="intro__photo-box">
             <img
               src="Landing Page/images/illustration-intro.svg"
               alt=""
@@ -79,7 +81,7 @@
 
       <section id="why-us" class="section-about">
         <div class="about">
-          <div class="about__left">
+          <div data-aos="fade-right" data-aos-duration="1000" class="about__left">
             <h2 class="heading-secondary margin-bottom--3">
               What’s different about [Tool Name]
             </h2>
@@ -87,7 +89,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
             </p>
           </div>
-          <div class="about__right">
+          <div data-aos="fade-left" data-aos-duration="1000" class="about__right">
             <ul role="list" class="feature">
               <li class="feature__item">
                 <h3 class="heading-tertiary feature__heading">
@@ -120,8 +122,8 @@
 
 
       <section id="testimonial" class="section-testimonial">
-        <h2 class="heading-secondary margin-bottom--6">What they’ve said</h2>
-        <div class="testimonial-container slider">
+        <h2 data-aos="zoom-in" data-aos-duration="1000" class="heading-secondary margin-bottom--6">What they’ve said</h2>
+        <div data-aos="zoom-in" data-aos-duration="1000" class="testimonial-container slider">
           <figure class="testimonial">
             <img
               src="Landing Page/images/avatar-anisha.png"
@@ -167,11 +169,14 @@
             </p>
           </figure>
         </div>
-        <a href="Login & Signup Form/index.html" class="cta-btn">Get Started</a>
+        <div data-aos="zoom-out" data-aos-duration="1000">
+          <a href="Login & Signup Form/index.html" class="cta-btn">Get Started</a>
+        </div>
+
       </section>
 
       <section id="pricing" class="Pricing">
-        <header>
+        <header data-aos="zoom-out" data-aos-duration="1000">
           <h2 class="heading-secondary pricing-title">Pricing</h2>
           <div class="toggle--container">
             <span>Annually</span>
@@ -182,7 +187,7 @@
         </header>
     
         <content>
-          <section class="card" id="basic">
+          <section  data-aos="fade-up-right" data-aos-duration="1000" class="card" id="basic">
             <p class="card__title">Basic</p>
             <h1><span>&dollar;</span>19.99</h1>
             <div class="card__details">
@@ -192,7 +197,7 @@
             </div>
             <button class="primary">Learn More</button>
           </section>
-          <section class="card accent" id="professional">
+          <section data-aos="fade-up" data-aos-duration="1000" class="card accent" id="professional">
             <p class="card__title">Professional</p>
             <h1><span>&dollar;</span>24.99</h1>
             <div class="card__details">
@@ -202,7 +207,7 @@
             </div>
             <button class="accent">Learn More</button>
           </section>
-          <section class="card" id="master">
+          <section class="card" id="master" data-aos="fade-up-left" data-aos-duration="1000">
             <p class="card__title">Master</p>
             <h1><span>&dollar;</span>39.99</h1>
             <div class="card__details">
@@ -216,10 +221,10 @@
       </section>
 
       <section class="section-simplify cta">
-        <h2 class="heading-secondary heading-secondary--simplify">
+        <h2 data-aos="zoom-in-right" data-aos-duration="1000" class="heading-secondary heading-secondary--simplify">
           Simplify your life forever day with [Tool Name]
         </h2>
-        <a href="Login & Signup Form/index.html" class="cta-btn cta-btn--simplify">Get Started</a>
+        <a data-aos="zoom-in-left" data-aos-duration="1000" href="Login & Signup Form/index.html" class="cta-btn cta-btn--simplify">Get Started</a>
       </section>
     </main>
 
@@ -300,7 +305,14 @@
       </div>
     </footer>
 
+    <!-- JAVASCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js"></script>
+    <script src="Landing Page/script.js"></script>
+
   </body>
-  <script src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js"></script>
-  <script src="Landing Page/script.js"></script>
+
 </html>
